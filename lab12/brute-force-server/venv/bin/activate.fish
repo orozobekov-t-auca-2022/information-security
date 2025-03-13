@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/vagrant/lab12/brute-force-server/venv
+set -gx VIRTUAL_ENV /home/vagrant/information-security/lab12/brute-force-server/venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
